@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-kaas-sdk';
+import { sendCommand, DEVICE_COMMAND_ANDROID } from 'react-native-kaas-sdk';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string>('-');
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    sendCommand(DEVICE_COMMAND_ANDROID.UNLOCK).then(() => setResult('SUCCESS'));
   }, []);
 
   return (

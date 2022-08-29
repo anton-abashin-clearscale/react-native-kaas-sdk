@@ -1,8 +1,8 @@
 @objc(KaasSdk)
 class KaasSdk: NSObject {
 
-  @objc(multiply:withB:withResolver:withRejecter:)
-  func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-    resolve(a*b)
+  @objc(sendCommand:withResolver:withRejecter:)
+  func sendCommand(command: Sting, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+    resolve(null)
   }
 }

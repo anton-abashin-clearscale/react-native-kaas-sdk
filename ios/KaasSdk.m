@@ -2,7 +2,7 @@
 
 @interface RCT_EXTERN_MODULE(KaasSdk, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
+RCT_EXTERN_METHOD(sendCommand:(string)command
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
